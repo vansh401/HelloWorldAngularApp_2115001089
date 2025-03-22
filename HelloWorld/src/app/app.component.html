@@ -3,8 +3,10 @@
   <img [src]="imgUrl" (click)="openBridgeLabz()" alt="BridgeLabz Logo" />
 
   <div class="formPart">
-    <input type="text" [(ngModel)]="userName" placeholder="Enter your name" />
+    <input type="text" [(ngModel)]="userName" (input)="onInput($event)" placeholder="Enter your name" />
     <h2>{{ welcomeMessage }}</h2>
+    <span class="error-output">{{nameError}}</span>
+
   </div>
 </div>
 
